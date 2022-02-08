@@ -1,0 +1,45 @@
+<link href="https://fonts.googleapis.com/css?family=Lora:400,400italic" rel="stylesheet" type="text/css">
+<link href="./css/style.css" rel="stylesheet" />
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<header class="bg-blue-900" x-data="{ isOpen: false }">
+    <nav class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+        <div class="flex items-center justify-between">
+            <a class="text-xl font-bold text-white transition-colors duration-300 transform md:text-2xl hover:text-indigo-400"
+            href="/">Değerli Edebiyat</a>
+
+            <!-- Mobile menu button -->
+            <div @click="isOpen = !isOpen" class="flex md:hidden">
+                <button type="button" class="text-gray-200 hover:text-gray-400 focus:outline-none focus:text-gray-400"
+                    aria-label="toggle menu">
+                    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+                        <path fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+        <div :class="isOpen ? 'flex' : 'hidden'"
+            class="flex-col mt-2 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0">
+            <a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+                href="/">Anasayfa</a>
+           
+            <a class="text-sm font-medium text-gray-200 transition-colors duration-300 transform hover:text-indigo-400"
+                href="/iletisim">İletişim</a>
+          
+      
+    </nav>
+
+    <section class="flex items-center justify-center" style="height: 500px;">
+        <div class="text-center">
+            <p class="text-xl font-medium tracking-wider text-gray-300">İçel Anadolu Lisesi</p>
+            <h2 class="mt-6 text-3xl font-bold text-white md:text-5xl">Türk Edebiyatının <br> En Değerlileri
+      </h2>
+
+         
+        </div>
+    </section>
+</header>
